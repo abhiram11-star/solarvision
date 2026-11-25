@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarVision | Atmospheric Refraction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">☀ SolarVision</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#concept">The Concept</a>
+            <a href="#science">Science</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#position">Positions</a>
+            <a href="#takeaways">Takeaways</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="sky-animation" aria-hidden="true">
+    <div class="cloud cloud-one">☁️</div>
+    <div class="cloud cloud-two">☁️</div>
+    <div class="cloud cloud-three">☁️</div>
+
+    <div class="star star-one">✦</div>
+    <div class="star star-two">✦</div>
+    <div class="star star-three">✧</div>
+    <div class="star star-four">✦</div>
+
+    <div class="shooting-star"></div>
+</div>
+<div class="sun-animation">
+    <div class="sun-rays"></div>
+    <div class="sun-core"></div>
+</div>
+        <p class="tagline">CLASS 10 PHYSICS • LIGHT</p>
+
+        <h1>
+            The Sun We See<br>
+            <span>Is Not Where It Seems</span>
+        </h1>
+
+        <p class="description">
+            Discover the fascinating science of atmospheric
+            refraction and understand the difference between
+            the actual and apparent position of the Sun.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#concept" class="btn-primary">
+                Explore the Science →
+            </a>
+
+            <a href="#science" class="btn-secondary">
+                Learn How It Works
+            </a>
+        </div>
+
+    </section>
+
+<!-- MAIN SCIENCE SECTION -->
+
+<section class="science-section" id="concept">
+
+    <p class="tagline">UNDERSTANDING THE PHENOMENON</p>
+
+    <h2>Actual vs Apparent Position</h2>
+
+    <p class="section-intro">
+        Why does the Sun appear at a different position
+        from where it actually is?
+    </p>
+
+    <div class="science-card">
+
+        <h3>01. Actual Position of the Sun</h3>
+
+        <p>
+            The actual position is the real position of the Sun
+            in the sky before considering the bending of light
+            due to Earth's atmosphere.
+        </p>
+
+    </div>
+
+    <div class="science-card">
+
+        <h3>02. Apparent Position of the Sun</h3>
+
+        <p>
+            The apparent position is the position where the Sun
+            appears to be when we observe it from Earth.
+            Due to atmospheric refraction, the Sun appears
+            higher than its actual position near the horizon.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+
+<section class="science-section" id="science">
+
+    <p class="tagline">THE SCIENCE BEHIND THE SUN</p>
+
+    <h2>How Does It Happen?</h2>
+
+    <p class="section-intro">
+        Sunlight travels through different layers of Earth's
+        atmosphere before reaching our eyes.
+    </p>
+
+    <div class="science-card">
+
+        <h3>01. Light Enters the Atmosphere</h3>
+
+        <p>
+            Sunlight enters Earth's atmosphere from space
+            and passes through layers of air having
+            different densities.
+        </p>
+
+    </div>
+
+    <div class="science-card">
+
+        <h3>02. Light Changes Direction</h3>
+
+        <p>
+            As light travels through these layers, it
+            continuously bends due to atmospheric refraction.
+        </p>
+
+    </div>
+
+    <div class="science-card">
+
+        <h3>03. We See the Apparent Position</h3>
+
+        <p>
+            Our eyes trace the refracted light backwards
+            in a straight line, making the Sun appear
+            higher than its actual position near the horizon.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- POSITION COMPARISON SECTION -->
+
+<section class="science-section" id="position">
+
+    <p class="tagline">VISUALISING ATMOSPHERIC REFRACTION</p>
+
+    <h2>Where Is the Sun Actually?</h2>
+
+    <p class="section-intro">
+        Due to atmospheric refraction, the Sun appears
+        higher in the sky than its actual position.
+    </p>
+
+    <div class="science-card">
+
+        <h3>Understanding the Two Positions</h3>
+
+
+
+    
+<div class="sun-diagram animated-diagram">
+
+    <h3>Atmospheric Refraction of Sunlight</h3>
+<button id="diagramControl">Pause Animation</button>
+    <svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+            <linearGradient id="atmosphereGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.05"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.35"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Atmosphere -->
+         <!-- ANIMATED ATMOSPHERE LAYERS -->
+<ellipse cx="400" cy="350" rx="390" ry="95"
+         fill="none" stroke="#38bdf8"
+         stroke-width="3" opacity="0.25"
+         class="atmosphere-layer layer-one"/>
+
+<ellipse cx="400" cy="350" rx="340" ry="75"
+         fill="none" stroke="#38bdf8"
+         stroke-width="3" opacity="0.35"
+         class="atmosphere-layer layer-two"/>
+
+<ellipse cx="400" cy="350" rx="290" ry="55"
+         fill="none" stroke="#38bdf8"
+         stroke-width="3" opacity="0.45"
+         class="atmosphere-layer layer-three"/>
+        <path d="M 0 300 Q 400 245 800 300 L 800 430 L 0 430 Z"
+              fill="url(#atmosphereGradient)"/>
+
+        <text x="400" y="285" fill="#7dd3fc" text-anchor="middle" font-size="17">
+            Earth's Atmosphere
+        </text>
+
+        <!-- Earth -->
+        <path d="M 0 350 Q 400 295 800 350 L 800 430 L 0 430 Z"
+              fill="#166534"/>
+
+        <text x="400" y="390" fill="white" text-anchor="middle" font-size="20">
+            Earth
+        </text>
+
+        <!-- Actual Sun -->
+        <circle cx="100" cy="65" r="32" fill="#f97316"/>
+        <text x="100" y="25" fill="#fb923c" text-anchor="middle" font-size="17">
+            Actual Sun
+        </text>
+
+        <!-- Apparent Sun -->
+        <circle cx="330" cy="65" r="25" fill="#fde047"/>
+        <text x="330" y="25" fill="#fde047" text-anchor="middle" font-size="17">
+            Apparent Position
+        </text>
+
+        <!-- Light path: illustrative curved ray -->
+        <path d="M 132 85 Q 300 150 430 210 Q 520 265 650 315"
+              fill="none"
+              stroke="#facc15"
+              stroke-width="4"
+              stroke-dasharray="10 8"
+              class="light-ray"/>
+
+        <!-- Backward extension -->
+        <path d="M 430 210 Q 350 120 330 90"
+              fill="none"
+              stroke="#fde047"
+              stroke-width="3"
+              stroke-dasharray="7 7"
+              opacity="0.7"/>
+
+        <!-- Observer -->
+        <circle cx="650" cy="315" r="10" fill="white"/>
+        <path d="M 650 325 L 650 350" stroke="white" stroke-width="4"/>
+        <text x="650" y="370" fill="white" text-anchor="middle" font-size="17">
+            Observer
+        </text>
+
+        <!-- Moving light particle -->
+        <circle r="7" fill="white" class="light-particle">
+            <animateMotion dur="4s" repeatCount="indefinite"
+                path="M 132 85 Q 300 150 430 210 Q 520 265 650 315"/>
+        </circle>
+
+    </svg>
+
+    <p class="diagram-caption">
+        Light from the Sun bends as it passes through Earth's atmosphere.
+        The observer sees the Sun at a higher apparent position.
+    </p>
+
+</div>
+</section>
+
+<!-- WHY THE SUN APPEARS HIGHER -->
+
+<section class="science-section">
+
+    <p class="tagline">UNDERSTANDING THE SCIENCE</p>
+
+    <h2>Why Does the Sun Appear Higher?</h2>
+
+    <div class="science-card">
+
+        <h3>Atmospheric Refraction Explained</h3>
+
+        <p>
+            Earth's atmosphere consists of layers of air
+            with different optical densities. Generally,
+            the optical density increases closer to
+            Earth's surface.
+        </p>
+
+        <p>
+            When sunlight passes through these layers,
+            it continuously bends towards the normal
+            as it enters optically denser layers.
+        </p>
+
+        <p>
+            Our eyes see the refracted sunlight and
+            trace it backwards in a straight line.
+            This makes the Sun appear higher than
+            its actual position.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- INTERACTIVE QUIZ -->
+
+<section class="science-section" id="quiz">
+
+    
+<section class="science-section" id="quiz">
+
+    <p class="tagline">TEST YOUR KNOWLEDGE</p>
+
+    <h2>Physics Challenge</h2>
+
+    <p class="section-intro">
+        Answer these five questions about atmospheric refraction!
+    </p>
+
+    <div class="science-card quiz-card">
+
+        <div class="question" data-answer="1">
+            <h3>Question 1</h3>
+            <p>What causes the apparent shift in the Sun's position?</p>
+            <div class="quiz-options">
+                <button>Reflection</button>
+                <button>Atmospheric refraction</button>
+                <button>Dispersion</button>
+                <button>Scattering</button>
+            </div>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>Question 2</h3>
+            <p>Which position is the real position of the Sun?</p>
+            <div class="quiz-options">
+                <button>Actual position</button>
+                <button>Apparent position</button>
+                <button>Virtual position</button>
+                <button>None of these</button>
+            </div>
+        </div>
+
+        <div class="question" data-answer="2">
+            <h3>Question 3</h3>
+            <p>Why does light bend in Earth's atmosphere?</p>
+            <div class="quiz-options">
+                <button>Because of reflection</button>
+                <button>Because of gravity alone</button>
+                <button>Because air layers have different optical densities</button>
+                <button>Because of sound waves</button>
+            </div>
+        </div>
+
+        <div class="question" data-answer="1">
+            <h3>Question 4</h3>
+            <p>Where does the Sun appear near the horizon due to refraction?</p>
+            <div class="quiz-options">
+                <button>Lower than its actual position</button>
+                <button>Higher than its actual position</button>
+                <button>At the same position</button>
+                <button>Below the horizon always</button>
+            </div>
+        </div>
+
+        <div class="question" data-answer="0">
+            <h3>Question 5</h3>
+            <p>What does an observer see when looking at the refracted sunlight?</p>
+            <div class="quiz-options">
+                <button>The apparent position</button>
+                <button>The Earth's core</button>
+                <button>The actual light path</button>
+                <button>The atmosphere disappearing</button>
+            </div>
+        </div>
+
+        <button id="finish-quiz" onclick="finishQuiz()">
+            Finish Quiz
+        </button>
+
+        <p id="quiz-result"></p>
+
+    </div>
+</section>
+const diagramControl = document.getElementById("diagramControl");
+const diagramSvg = document.querySelector(".animated-diagram svg");
+
+diagramControl.addEventListener("click", function() {
+    if (diagramControl.textContent === "Pause Animation") {
+        diagramSvg.pauseAnimations();
+        diagramControl.textContent = "Play Animation";
+    } else {
+        diagramSvg.unpauseAnimations();
+        diagramControl.textContent = "Pause Animation";
+    }
+});
+script></script>
+
+let score = 0;
+let answered = 0;
+
+document.querySelectorAll(".question").forEach(question => {
+
+    const buttons = question.querySelectorAll("button");
+    const correctAnswer = Number(question.dataset.answer);
+
+    buttons.forEach((button, index) => {
+
+        button.addEventListener("click", () => {
+
+            if (question.dataset.done) return;
+
+            question.dataset.done = "true";
+            answered++;
+
+            if (index === correctAnswer) {
+                score++;
+                button.style.background = "#166534";
+            } else {
+                button.style.background = "#991b1b";
+                buttons[correctAnswer].style.background = "#166534";
+            }
+
+            buttons.forEach(btn => btn.disabled = true);
+
+        });
+
+    });
+
+});
+
+function finishQuiz() {
+
+    const result = document.getElementById("quiz-result");
+
+    if (answered < 5) {
+        result.textContent = "Please answer all 5 questions first!";
+        result.style.color = "#facc15";
+        return;
+    }
+
+    result.textContent = "Your Score: " + score + "/5 🎉";
+    result.style.color = "#4ade80";
+
+}
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+</script>
+
+
+<script>
+
+function checkAnswer(button, correct) {
+
+    const result = document.getElementById("quiz-result");
+
+    if (correct) {
+        result.textContent = "Correct! Well done! 🎉";
+        result.style.color = "#4ade80";
+    } else {
+        result.textContent = "Not quite! Try again. 😊";
+        result.style.color = "#f87171";
+    }
+
+}
+
+</script>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <h2>☀ SolarVision</h2>
+
+    <p>
+        Exploring the wonders of light and atmospheric refraction.
+    </p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#concept">Concept</a>
+        <a href="#science">Science</a>
+        <a href="#quiz">Quiz</a>
+    </div>
+
+    <div class="footer-line"></div>
+
+    <p class="copyright">
+        Class 10 Physics Seminar | Made for Learning
+    </p>
+
+</footer>
+
+<!-- KEY TAKEAWAYS -->
+
+<section class="science-section" id="takeaways">
+
+    <p class="tagline">REMEMBER THESE POINTS</p>
+
+    <h2>Key Takeaways</h2>
+
+    <div class="science-card">
+
+        <h3>☀ Actual Position</h3>
+        <p>The real position of the Sun.</p>
+
+        <h3>✨ Apparent Position</h3>
+        <p>The position where the Sun appears to be due to atmospheric refraction.</p>
+
+        <h3>🌍 Atmospheric Refraction</h3>
+        <p>The bending of light as it travels through different layers of Earth's atmosphere.</p>
+
+        <h3>💡 Important Observation</h3>
+        <p>The Sun appears higher than its actual position near the horizon.</p>
+
+    </div>
+
+</section>
+<button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑ Back to Top
+</button>
+</body>
+
+   
+    
+
+</body>
+</html>
