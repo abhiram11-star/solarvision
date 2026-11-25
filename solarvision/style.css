@@ -1,0 +1,873 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b1a;
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 65px;
+    margin-top: 180px;
+    color: #60a5fa;
+    text-shadow: 0 0 25px #2563eb;
+}
+
+p {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #10162b;
+    border-bottom: 1px solid #263354;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 85vh;
+    padding: 130px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagline {
+    color: #60a5fa;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin-top: 25px;
+    color: white;
+    text-shadow: none;
+}
+
+.hero h1 span {
+    color: #60a5fa;
+    text-shadow: 0 0 25px #2563eb;
+}
+
+.description {
+    max-width: 650px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.hero-buttons a {
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #60a5fa;
+    color: #60a5fa;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #2563eb66;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+    nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    font-size: 14px;
+    padding: 6px;
+}
+}
+
+/* SCIENCE SECTION */
+
+.science-section {
+    padding: 100px 8%;
+    background: #0d1429;
+    text-align: center;
+}
+
+.science-section h2 {
+    font-size: 42px;
+    margin-top: 20px;
+    color: white;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin: 20px auto 50px;
+    line-height: 1.8;
+    color: #94a3b8;
+}
+
+.science-card {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 35px;
+    text-align: left;
+    background: #151f38;
+    border: 1px solid #263c63;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.science-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+    box-shadow: 0 0 25px #2563eb33;
+}
+
+.science-card h3 {
+    color: #60a5fa;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.science-card p {
+    color: #cbd5e1;
+    line-height: 1.9;
+    font-size: 16px;
+    margin: 0;
+    text-align: left;
+}
+
+/* SUN POSITION DIAGRAM */
+
+.sun-diagram {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 20px;
+    background: #151f38;
+    border: 1px solid #29436d;
+    border-radius: 18px;
+    box-shadow: 0 0 30px #2563eb22;
+}
+
+.sun-diagram svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.sun-diagram p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.position-list {
+    color: #cbd5e1;
+    line-height: 2.2;
+    padding-left: 25px;
+    font-size: 16px;
+}
+
+.position-list strong {
+    color: #60a5fa;
+}
+
+.position-note {
+    background: #101b35;
+    border-left: 4px solid #60a5fa;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 25px;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+/* DIAGRAM HOVER EFFECT */
+
+.sun-diagram:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 0 35px #2563eb44;
+    transition: 0.3s;
+}
+
+/* QUIZ DESIGN */
+
+.quiz-card {
+    max-width: 850px;
+}
+
+.quiz-card h3 {
+    font-size: 25px;
+}
+
+.quiz-card > p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.quiz-options button {
+    padding: 18px;
+    border: 1px solid #334b75;
+    border-radius: 10px;
+    background: #101b35;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-options button:hover {
+    background: #2563eb;
+    border-color: #60a5fa;
+    transform: translateY(-3px);
+}
+
+#quiz-result {
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FOOTER DESIGN */
+
+.footer {
+    background: #070b18;
+    padding: 60px 20px 25px;
+    text-align: center;
+    border-top: 1px solid #263354;
+}
+
+.footer h2 {
+    color: #60a5fa;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: #94a3b8;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+}
+
+.footer-line {
+    max-width: 800px;
+    height: 1px;
+    background: #263354;
+    margin: 25px auto;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ANIMATED SUN */
+
+.sun-animation {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+    border-radius: 50%;
+    background: #facc1520;
+    box-shadow: 0 0 45px #f59e0b33;
+    animation: sunGlow 3s infinite alternate;
+}
+
+.sun-core {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff7ae, #fbbf24, #f97316);
+    box-shadow: 0 0 35px #f59e0b;
+}
+
+@keyframes sunGlow {
+    from {
+        box-shadow: 0 0 25px #f59e0b33;
+        transform: scale(1);
+    }
+
+    to {
+        box-shadow: 0 0 65px #f59e0b88;
+        transform: scale(1.08);
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+button {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+.science-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.science-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 150, 255, 0.2);
+}
+.hero h1 {
+    text-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+}
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #080f20;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #38bdf8;
+}
+.science-section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+#backToTop {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background: #38bdf8;
+    transform: translateY(-4px);
+}
+.sun-diagram {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.sun-diagram svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.sun-animation {
+    animation: floatSun 3s ease-in-out infinite;
+}
+
+@keyframes floatSun {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.hero .btn {
+    animation: buttonFloat 3s ease-in-out infinite;
+}
+
+@keyframes buttonFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+.science-card {
+    animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ANIMATED SKY */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.sky-animation {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep hero content above the animation */
+.hero > *:not(.sky-animation) {
+    position: relative;
+    z-index: 1;
+}
+
+/* MOVING CLOUDS */
+.cloud {
+    position: absolute;
+    font-size: 55px;
+    opacity: 0.25;
+    animation: cloudMove 18s linear infinite;
+}
+
+.cloud-one {
+    top: 15%;
+    left: -100px;
+}
+
+.cloud-two {
+    top: 45%;
+    left: -150px;
+    animation-delay: 6s;
+    font-size: 70px;
+}
+
+.cloud-three {
+    top: 75%;
+    left: -120px;
+    animation-delay: 12s;
+    font-size: 45px;
+}
+
+@keyframes cloudMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(110vw);
+    }
+}
+
+/* TWINKLING STARS */
+.star {
+    position: absolute;
+    color: #ffffff;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.star-one {
+    top: 15%;
+    left: 20%;
+}
+
+.star-two {
+    top: 30%;
+    left: 75%;
+    animation-delay: 0.5s;
+}
+
+.star-three {
+    top: 70%;
+    left: 85%;
+    animation-delay: 1s;
+}
+
+.star-four {
+    top: 80%;
+    left: 30%;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+/* SHOOTING STAR */
+.shooting-star {
+    position: absolute;
+    top: 20%;
+    left: 100%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    transform: rotate(-35deg);
+    animation: shooting 5s linear infinite;
+}
+
+@keyframes shooting {
+    0% {
+        left: 110%;
+        top: 10%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        left: -20%;
+        top: 55%;
+        opacity: 0;
+    }
+
+    100% {
+        left: -20%;
+        opacity: 0;
+    }
+}
+/* SMOOTHER ANIMATIONS */
+.cloud,
+.star,
+.shooting-star,
+.sun-animation,
+.hero .btn {
+    will-change: transform, opacity;
+}
+
+/* MOBILE ANIMATION ADJUSTMENTS */
+@media (max-width: 700px) {
+    .cloud {
+        font-size: 35px;
+    }
+
+    .cloud-two {
+        font-size: 45px;
+    }
+
+    .cloud-three {
+        font-size: 30px;
+    }
+
+    .shooting-star {
+        width: 65px;
+    }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* ANIMATED SUNLIGHT */
+.sun-animation {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun-core {
+    position: relative;
+    z-index: 2;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff7ae, #ffbf35, #ff8c00);
+    box-shadow:
+        0 0 25px #ffbd35,
+        0 0 60px rgba(255, 166, 0, 0.6);
+    animation: sunPulse 3s ease-in-out infinite;
+}
+
+.sun-rays {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 3px dashed rgba(255, 190, 50, 0.8);
+    border-radius: 50%;
+    animation: rotateRays 15s linear infinite;
+}
+
+@keyframes rotateRays {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sunPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+}
+/* ANIMATED PHYSICS DIAGRAM */
+
+.animated-diagram {
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.animated-diagram h3 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.animated-diagram svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.light-ray {
+    animation: rayGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes rayGlow {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.diagram-caption {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+/* ATMOSPHERE LAYER ANIMATION */
+
+.atmosphere-layer {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: atmospherePulse 4s ease-in-out infinite alternate;
+}
+
+.layer-two {
+    animation-delay: 0.5s;
+}
+
+.layer-three {
+    animation-delay: 1s;
+}
+
+@keyframes atmospherePulse {
+    from {
+        opacity: 0.15;
+    }
+
+    to {
+        opacity: 0.65;
+    }
+}
+/* GLOWING SUNLIGHT PARTICLE */
+
+.light-particle {
+    filter: drop-shadow(0 0 8px #facc15);
+}
+
+.light-particle {
+    animation: particleGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes particleGlow {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* SUNLIGHT REFRACTION EFFECT */
+
+.light-ray {
+    stroke-dasharray: 12 8;
+    animation: sunlightFlow 2s linear infinite,
+               rayGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes sunlightFlow {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -40;
+    }
+}
+/* GLOWING OBSERVER */
+
+.animated-diagram svg circle[cx="650"][cy="315"] {
+    filter: drop-shadow(0 0 10px #ffffff);
+    animation: observerGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes observerGlow {
+    from {
+        filter: drop-shadow(0 0 3px #ffffff);
+    }
+
+    to {
+        filter: drop-shadow(0 0 14px #38bdf8);
+    }
+}
+#diagramControl {
+    padding: 10px 22px;
+    margin: 10px auto 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#diagramControl:hover {
+    background: #38bdf8;
+}
