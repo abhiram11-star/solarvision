@@ -404,62 +404,74 @@ diagramControl.addEventListener("click", function() {
 });
 script></script>
 
+
+
 let score = 0;
 let answered = 0;
 
-document.querySelectorAll(".question").forEach(question => {
+const questions = document.querySelectorAll(".question");
 
-    const buttons = question.querySelectorAll("button");
+questions.forEach((question) => {
+    const buttons = question.querySelectorAll(".quiz-options button");
     const correctAnswer = Number(question.dataset.answer);
 
-    buttons.forEach((button, index) => {
+    // Create feedback message
+    let feedback = question.querySelector(".quiz-feedback");
 
+    if (!feedback) {
+        feedback = document.createElement("p");
+        feedback.className = "quiz-feedback";
+        question.querySelector(".quiz-options").after(feedback);
+    }
+
+    buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
 
-            if (question.dataset.done) return;
+            // Prevent answering the same question twice
+            if (question.dataset.answered === "true") return;
 
-            question.dataset.done = "true";
+            question.dataset.answered = "true";
             answered++;
+
+            // Disable all options
+            buttons.forEach((btn) => {
+                btn.disabled = true;
+            });
 
             if (index === correctAnswer) {
                 score++;
-                button.style.background = "#166534";
+
+                button.classList.add("correct-answer");
+                feedback.textContent = "Correct! Well done!";
+                feedback.className = "quiz-feedback correct-feedback";
+
             } else {
-                button.style.background = "#991b1b";
-                buttons[correctAnswer].style.background = "#166534";
+                button.classList.add("wrong-answer");
+                buttons[correctAnswer].classList.add("correct-answer");
+
+                feedback.textContent =
+                    "Incorrect! The correct answer is: " +
+                    buttons[correctAnswer].textContent.trim();
+
+                feedback.className = "quiz-feedback wrong-feedback";
             }
 
-            buttons.forEach(btn => btn.disabled = true);
-
+            // Finish quiz after all 5 questions
+            if (answered === questions.length) {
+                finishQuiz();
+            }
         });
-
     });
-
 });
 
 function finishQuiz() {
-
     const result = document.getElementById("quiz-result");
 
-    if (answered < 5) {
-        result.textContent = "Please answer all 5 questions first!";
-        result.style.color = "#facc15";
-        return;
+    if (result) {
+        result.textContent = "Your score: " + score + " / " + questions.length;
     }
-
-    result.textContent = "Your Score: " + score + "/5 🎉";
-    result.style.color = "#4ade80";
-
 }
-const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", function() {
-    if (window.scrollY > 300) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
-    }
-});
 </script>
 
 
