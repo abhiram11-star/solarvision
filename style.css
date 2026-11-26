@@ -903,3 +903,31 @@ footer a:hover {
 .wrong-feedback {
     color: #f87171;
 }
+
+.quiz-options button.correct-answer {
+    background: #16a34a !important;
+    color: white !important;
+}
+
+.quiz-options button.wrong-answer {
+    background: #dc2626 !important;
+    color: white !important;
+}
+
+.quiz-options button:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.quiz-feedback {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.correct-feedback {
+    color: #22c55e;
+}
+
+.wrong-feedback {
+    color: #f87171;
+}

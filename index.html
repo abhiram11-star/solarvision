@@ -390,19 +390,83 @@
 
     </div>
 </section>
+
+<script>
+// Diagram animation button
 const diagramControl = document.getElementById("diagramControl");
 const diagramSvg = document.querySelector(".animated-diagram svg");
 
-diagramControl.addEventListener("click", function() {
-    if (diagramControl.textContent === "Pause Animation") {
-        diagramSvg.pauseAnimations();
-        diagramControl.textContent = "Play Animation";
-    } else {
-        diagramSvg.unpauseAnimations();
-        diagramControl.textContent = "Pause Animation";
-    }
+if (diagramControl && diagramSvg) {
+    diagramControl.addEventListener("click", function () {
+        if (diagramControl.textContent.trim() === "Pause Animation") {
+            diagramSvg.pauseAnimations();
+            diagramControl.textContent = "Play Animation";
+        } else {
+            diagramSvg.unpauseAnimations();
+            diagramControl.textContent = "Pause Animation";
+        }
+    });
+}
+
+// Quiz system
+let score = 0;
+let answered = 0;
+
+const questions = document.querySelectorAll(".question");
+
+questions.forEach((question) => {
+    const buttons = question.querySelectorAll(".quiz-options button");
+    const correctAnswer = Number(question.dataset.answer);
+
+    const feedback = document.createElement("p");
+    feedback.className = "quiz-feedback";
+    question.querySelector(".quiz-options").after(feedback);
+
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            if (question.dataset.answered === "true") return;
+
+            question.dataset.answered = "true";
+            answered++;
+
+            buttons.forEach((btn) => {
+                btn.disabled = true;
+            });
+
+            if (index === correctAnswer) {
+                score++;
+                button.classList.add("correct-answer");
+                feedback.textContent = "Correct! Well done!";
+                feedback.classList.add("correct-feedback");
+            } else {
+                button.classList.add("wrong-answer");
+                buttons[correctAnswer].classList.add("correct-answer");
+
+                feedback.textContent =
+                    "Incorrect! Correct answer: " +
+                    buttons[correctAnswer].textContent.trim();
+
+                feedback.classList.add("wrong-feedback");
+            }
+
+            if (answered === questions.length) {
+                finishQuiz();
+            }
+        });
+    });
 });
-script></script>
+
+// Display quiz score
+function finishQuiz() {
+    const result = document.getElementById("quiz-result");
+
+    if (result) {
+        result.textContent =
+            "Your score: " + score + " / " + questions.length;
+    }
+}
+</script>
+
 
 
 
