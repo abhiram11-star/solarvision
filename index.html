@@ -71,11 +71,21 @@
 
 <!-- MAIN SCIENCE SECTION -->
 
+
+
 <section class="science-section" id="concept">
 
     <p class="tagline">UNDERSTANDING THE PHENOMENON</p>
 
     <h2>Actual vs Apparent Position</h2>
+
+<div class="featured-science-image">
+    <img
+        src="images/atmospheric-refraction.png"
+        alt="Atmospheric refraction showing the actual and apparent positions of the Sun"
+    >
+    <p>Discover how Earth's atmosphere bends sunlight!</p>
+</div>
 
     <p class="section-intro">
         Why does the Sun appear at a different position
@@ -124,8 +134,7 @@
 
     <div class="science-card">
 
-        <h3>01. Light Enters the Atmosphere</h3>
-
+        <div class="science-icon sun-icon">☀️</div>
         <p>
             Sunlight enters Earth's atmosphere from space
             and passes through layers of air having
@@ -136,8 +145,7 @@
 
     <div class="science-card">
 
-        <h3>02. Light Changes Direction</h3>
-
+       <div class="science-icon earth-icon">🌍</div>
         <p>
             As light travels through these layers, it
             continuously bends due to atmospheric refraction.
@@ -147,7 +155,7 @@
 
     <div class="science-card">
 
-        <h3>03. We See the Apparent Position</h3>
+        <div class="science-icon light-icon">💡</div>
 
         <p>
             Our eyes trace the refracted light backwards
@@ -554,6 +562,32 @@ function checkAnswer(button, correct) {
     }
 
 }
+
+// SOLARVISION SCROLL REVEAL
+
+const revealElements = document.querySelectorAll(
+    ".science-card, .featured-science-image, section h2"
+);
+
+revealElements.forEach((element) => {
+    element.classList.add("reveal");
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
+
 
 </script>
 

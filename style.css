@@ -7,22 +7,21 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #080b1a;
-    color: white;
+    background: #080808;
+    color: #ffffff;
     min-height: 100vh;
     text-align: center;
 }
-
 h1 {
     font-size: 65px;
     margin-top: 180px;
-    color: #60a5fa;
-    text-shadow: 0 0 25px #2563eb;
+    color: #d4af37;
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
 }
 
 p {
     font-size: 20px;
-    color: #cbd5e1;
+    color: #d6d0bd;
     margin-top: 20px;
     letter-spacing: 1px;
 }
@@ -35,14 +34,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #10162b;
-    border-bottom: 1px solid #263354;
+    background: #080808;
+    border-bottom: 1px solid #8f7525;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.08);
 }
 
 .logo {
     font-size: 25px;
     font-weight: bold;
-    color: #60a5fa;
+    color: #f5d76e;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
 
 nav {
@@ -51,16 +52,16 @@ nav {
 }
 
 nav a {
-    color: #cbd5e1;
+    color: #d6d0bd;
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #60a5fa;
+    color: #f5d76e;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
 }
-
 /* HERO SECTION */
 
 .hero {
@@ -70,34 +71,37 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, #050505, #17130a, #080808);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4);
 }
 
 .tagline {
-    color: #60a5fa;
+    color: #d4af37;
     font-size: 14px;
     letter-spacing: 4px;
     font-weight: bold;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
 .hero h1 {
     font-size: 58px;
     line-height: 1.2;
     margin-top: 25px;
-    color: white;
-    text-shadow: none;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
 .hero h1 span {
-    color: #60a5fa;
-    text-shadow: 0 0 25px #2563eb;
+    color: #f5d76e;
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.7);
 }
 
 .description {
     max-width: 650px;
     line-height: 1.8;
     margin-top: 25px;
+    color: #d6d0bd;
 }
-
 /* BUTTONS */
 
 .hero-buttons {
@@ -189,26 +193,28 @@ nav a {
     margin: 25px auto;
     padding: 35px;
     text-align: left;
-    background: #151f38;
-    border: 1px solid #263c63;
-    border-radius: 15px;
-    transition: 0.3s;
+    background: linear-gradient(145deg, #111111, #1c1910);
+    border: 1px solid #8f7525;
+    border-radius: 18px;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .science-card:hover {
-    transform: translateY(-5px);
-    border-color: #60a5fa;
-    box-shadow: 0 0 25px #2563eb33;
+    transform: translateY(-8px);
+    border-color: #f5d76e;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
 .science-card h3 {
-    color: #60a5fa;
+    color: #f5d76e;
     font-size: 23px;
     margin-bottom: 18px;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
 }
 
 .science-card p {
-    color: #cbd5e1;
+    color: #d6d0bd;
     line-height: 1.9;
     font-size: 16px;
     margin: 0;
@@ -930,4 +936,570 @@ footer a:hover {
 
 .wrong-feedback {
     color: #f87171;
+}
+
+/* ==================================
+   SOLARVISION PREMIUM VISUAL UPGRADE
+================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+    padding: 100px 25px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(124,58,237,.35), transparent 35%),
+        radial-gradient(circle at 15% 80%, rgba(14,165,233,.3), transparent 35%),
+        linear-gradient(135deg, #080d2b, #172554, #312e81);
+    border-radius: 0 0 35px 35px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 900;
+    line-height: 1.1;
+    background: linear-gradient(90deg, #ffffff, #67e8f9, #facc15);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: titleReveal 1.2s ease both;
+}
+
+.hero p {
+    color: #dbeafe;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 35px;
+    background: linear-gradient(90deg, #facc15, #fb923c);
+    color: #172554;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(250,204,21,.35);
+    transition: .3s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 35px rgba(250,204,21,.7);
+}
+
+.sun-animation {
+    position: relative;
+    filter: drop-shadow(0 0 35px #facc15);
+    animation: sunFloat 4s ease-in-out infinite;
+}
+
+.sun-core {
+    background: radial-gradient(circle at 35% 30%, #fff7ae, #facc15, #f97316);
+    box-shadow: 0 0 50px #facc15, 0 0 100px rgba(249,115,22,.6);
+}
+
+.sun-rays {
+    animation: sunRotate 25s linear infinite;
+}
+
+.science-card {
+    border: 1px solid rgba(125,211,252,.25);
+    background: linear-gradient(145deg, #172554, #312e81);
+    border-radius: 22px;
+    padding: 25px;
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.science-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(56,189,248,.2);
+}
+
+button, a {
+    transition: all .3s ease;
+}
+
+section {
+    animation: sectionAppear .8s ease both;
+}
+
+@keyframes sunFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+@keyframes sunRotate {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes titleReveal {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sectionAppear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 500px;
+        padding: 70px 18px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero .btn {
+        padding: 13px 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero h1, .sun-animation, .sun-rays, section {
+        animation: none !important;
+    }
+}
+
+/* Featured science image */
+
+.featured-science-image {
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 12px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #38bdf8, #8b5cf6, #facc15);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+    animation: imageEntrance 1.2s ease both;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.featured-science-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.featured-science-image:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+}
+
+.featured-science-image p {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 15px 5px 5px;
+}
+
+@keyframes imageEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   SOLARVISION - PREMIUM SCIENCE CARDS
+===================================== */
+
+.science-card {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        #172554,
+        #312e81,
+        #1e1b4b
+    );
+
+    border: 1px solid rgba(96, 165, 250, 0.35);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+    animation: cardEntrance 0.8s ease both;
+}
+
+/* Glowing gradient overlay */
+
+.science-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(56, 189, 248, 0.25),
+        rgba(168, 85, 247, 0.25),
+        transparent
+    );
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover animation */
+
+.science-card:hover {
+    transform: translateY(-12px) scale(1.025);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 15px 35px rgba(56, 189, 248, 0.2),
+        0 0 25px rgba(139, 92, 246, 0.2);
+}
+
+.science-card:hover::before {
+    opacity: 1;
+}
+
+/* Card headings */
+
+.science-card h2,
+.science-card h3 {
+    color: #67e8f9;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.science-card:hover h2,
+.science-card:hover h3 {
+    color: #fde68a;
+}
+
+/* Card paragraphs */
+
+.science-card p {
+    color: #e0e7ff;
+    line-height: 1.8;
+    position: relative;
+}
+
+/* Staggered entrance animation */
+
+.science-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.science-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.science-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile-friendly effects */
+
+@media (max-width: 600px) {
+    .science-card {
+        padding: 22px;
+    }
+
+    .science-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .science-card {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* SOLARVISION ANIMATED SCIENCE ICONS */
+
+.science-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 42px;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg, #1e40af, #7c3aed);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
+/* Sun animation */
+.sun-icon {
+    animation: sunGlow 2s ease-in-out infinite alternate;
+}
+
+/* Earth animation */
+.earth-icon {
+    animation: earthFloat 4s ease-in-out infinite;
+}
+
+/* Light animation */
+.light-icon {
+    animation: lightPulse 2s ease-in-out infinite;
+}
+
+@keyframes sunGlow {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 12px #facc15;
+    }
+    to {
+        transform: scale(1.12) rotate(8deg);
+        box-shadow: 0 0 35px #facc15;
+    }
+}
+
+@keyframes earthFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(15deg);
+    }
+}
+
+@keyframes lightPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 12px #38bdf8;
+    }
+    50% {
+        transform: scale(1.12);
+        box-shadow: 0 0 35px #38bdf8;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .science-icon {
+        animation: none !important;
+    }
+}
+
+/* =================================
+   SOLARVISION COSMIC BACKGROUND
+================================= */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* Moving cosmic light */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 30% 40%,
+            rgba(56, 189, 248, 0.25),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 75% 30%,
+            rgba(168, 85, 247, 0.25),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 55% 75%,
+            rgba(37, 99, 235, 0.2),
+            transparent 25%
+        );
+
+    animation: cosmicMove 16s ease-in-out infinite alternate;
+}
+
+/* Twinkling star pattern */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(2px 2px at 15% 20%, white 50%, transparent 100%),
+        radial-gradient(2px 2px at 45% 65%, #7dd3fc 50%, transparent 100%),
+        radial-gradient(2px 2px at 80% 25%, white 50%, transparent 100%),
+        radial-gradient(2px 2px at 65% 85%, #c4b5fd 50%, transparent 100%),
+        radial-gradient(2px 2px at 25% 80%, white 50%, transparent 100%),
+        radial-gradient(2px 2px at 90% 60%, #fde68a 50%, transparent 100%);
+
+    background-size: 350px 300px;
+    animation: starDrift 25s linear infinite;
+}
+
+/* Cosmic light movement */
+
+@keyframes cosmicMove {
+    0% {
+        transform: translate(-3%, -2%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(3%, 2%) rotate(8deg);
+    }
+
+    100% {
+        transform: translate(-2%, 4%) rotate(-8deg);
+    }
+}
+
+/* Floating stars */
+
+@keyframes starDrift {
+    from {
+        background-position: 0 0;
+        opacity: 0.45;
+    }
+
+    to {
+        background-position: 350px 300px;
+        opacity: 1;
+    }
+}
+
+/* Keep content above background effects */
+
+.hero > * {
+    position: relative;
+}
+
+/* Respect reduced motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero::before,
+    .hero::after {
+        animation: none !important;
+    }
+}
+
+/* SOLARVISION SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger science cards */
+
+.science-card.reveal:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.science-card.reveal:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+/* SOLARVISION BLACK AND GOLD THEME */
+
+body {
+    background: #080808 !important;
+    color: #ffffff;
+}
+
+section {
+    background-color: #080808;
+}
+
+header,
+nav,
+footer {
+    background: #101010;
+    border-color: #8f7525;
+}
+
+h2, h3 {
+    color: #f5d76e;
+}
+
+button,
+.btn {
+    background: linear-gradient(135deg, #d4af37, #f5d76e);
+    color: #080808;
+    border: 1px solid #d4af37;
+}
+
+button:hover,
+.btn:hover {
+    box-shadow: 0 0 22px rgba(212, 175, 55, 0.6);
+}
+
+.science-card {
+    background: linear-gradient(145deg, #111111, #1c1910) !important;
+}
+/* REMOVE BLUE HOVER EFFECTS */
+
+.science-card:hover {
+    background: linear-gradient(145deg, #17130a, #24200f) !important;
+    border-color: #f5d76e !important;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4) !important;
+    transform: translateY(-8px);
+}
+
+.science-card:hover h3 {
+    color: #f5d76e !important;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.science-card::before {
+    background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.12),
+        transparent
+    ) !important;
 }
